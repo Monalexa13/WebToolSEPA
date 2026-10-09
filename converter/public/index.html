@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pain.001 zu camt.055 Konverter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>XML Konverter</h1>
+    <p>Konvertierung von <strong>pain.001.001.09-Nachricht</strong> zu <strong>camt.055.001.05-Nachricht</strong>.</p>
+
+    <form id="converterForm">
+        <div class="upload-box">
+            <input type="file" id="input" accept=".xml" required>
+        </div>
+        <button type="submit">Datei hochladen und Einzeltransaktionen anzeigen</button>
+    </form>
+
+    <div id="resultContainer" class="result-container" style="display: none;">
+        <h3>Einzeltransaktionen:</h3>
+
+        <input type="text" id="tableSearch" class="search-input" placeholder="Tabelle durchsuchen...">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Auswählen</th>
+                    <th>EndToEndID</th>
+                    <th>Empfänger (IBAN)</th>
+                    <th>Empfänger (Name)</th>
+                    <th>Geldbetrag</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2022 rel. 2 sp2 (http://www.altova.com) im April 2025 von der SIZ GmbH bearbeitet -->
+<!-- Änderungen gegenüber der Vorfassung: semi-strukturierte Adressangabe -->
+<!-- Dieses Beispiel wurde mit TVS pain.001.001.09_GBIC_5.xsd erstellt -->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09 pain.001.001.09.xsd">
+	<CstmrCdtTrfInitn>
+		<GrpHdr>
+			<MsgId>Message-ID-4711</MsgId>
+			<CreDtTm>2025-10-07T09:30:47.000Z</CreDtTm>
+			<NbOfTxs>2</NbOfTxs>
+			<CtrlSum>6655.86</CtrlSum>
+			<InitgPty>
+				<Nm>Initiator Name</Nm>
+			</InitgPty>
+		</GrpHdr>
+		<PmtInf>
+			<PmtInfId>Payment-Information-ID-4711</PmtInfId>
+			<PmtMtd>TRF</PmtMtd>
+			<BtchBookg>true</BtchBookg>
+			<NbOfTxs>2</NbOfTxs>
+			<CtrlSum>6655.86</CtrlSum>
+			<PmtTpInf>
+				<SvcLvl>
+					<Cd>SEPA</Cd>
+				</SvcLvl>
+			</PmtTpInf>
+			<ReqdExctnDt>
+				<Dt>2025-10-10</Dt>
+			</ReqdExctnDt>
+			<Dbtr>
+				<Nm>Debtor Name</Nm>
+			</Dbtr>
+			<DbtrAcct>
+				<Id>
+					<IBAN>DE87200500001234567890</IBAN>
+				</Id>
+			</DbtrAcct>
+			<DbtrAgt>
+				<FinInstnId>
+					<BICFI>BANKDEFFXXX</BICFI>
+				</FinInstnId>
+			</DbtrAgt>
+			<ChrgBr>SLEV</ChrgBr>
+			<CdtTrfTxInf>
+				<PmtId>
+					<EndToEndId>OriginatorID1234</EndToEndId>
+				</PmtId>
+				<Amt>
+					<InstdAmt Ccy="EUR">6543.14</InstdAmt>
+				</Amt>
+				<CdtrAgt>
+					<FinInstnId>
+						<BICFI>SPUEDE2UXXX</BICFI>
+					</FinInstnId>
+				</CdtrAgt>
+				<Cdtr>
+					<Nm>Firma Musterland GmbH</Nm>
+          <!-- Angabe einer semi-strukturierten Adresse. Mindestbelegung für eine Adresse sind Stadt/Land (d.h. <TwnNm> und <Ctry>). Weitere strukturierte sowie unstrukturierte Adressangaben sind möglich.  -->
+					<PstlAdr>
+						<StrtNm>Musterlandstraße</StrtNm>
+						<BldgNb>47</BldgNb>
+						<PstCd>53113</PstCd>
+						<TwnNm>Bonn</TwnNm>
+						<Ctry>DE</Ctry>
+						<AdrLine>Suedstadt</AdrLine>
+					</PstlAdr>
+				</Cdtr>
+				<CdtrAcct>
+					<Id>
+						<IBAN>DE21500500009876543210</IBAN>
+					</Id>
+				</CdtrAcct>
+				<RmtInf>
+					<Ustrd>Unstructured Remittance Information</Ustrd>
+				</RmtInf>
+			</CdtTrfTxInf>
+			<CdtTrfTxInf>
+				<PmtId>
+					<EndToEndId>OriginatorID1235</EndToEndId>
+				</PmtId>
+				<Amt>
+					<InstdAmt Ccy="EUR">112.72</InstdAmt>
+				</Amt>
+				<CdtrAgt>
+					<FinInstnId>
+						<BICFI>SPUEDE2UXXX</BICFI>
+					</FinInstnId>
+				</CdtrAgt>
+				<Cdtr>
+					<Nm>Other Creditor Name</Nm>
+				</Cdtr>
+				<CdtrAcct>
+					<Id>
+						<IBAN>DE21500500001234567897</IBAN>
+					</Id>
+				</CdtrAcct>
+				<RmtInf>
+					<Ustrd>Haribo Bonn/Fruchtgummiweg 13/2025-10-02T11:37/ - hier noch weitere Infos </Ustrd>
+				</RmtInf>
+			</CdtTrfTxInf>
+		</PmtInf>
+	</CstmrCdtTrfInitn>
+</Document>
